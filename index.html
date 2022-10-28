@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>Mehrwertsteuer-rechner</h1>
+      <section id="brutto-netto">
+        <div class="eingabe">
+          <div class="section1">
+            <h2>was soll berechnet werden?</h2>
+            <div>
+              <input
+                onchange="bruttoZuNetto(event)"
+                type="radio"
+                name="1"
+                id="bruttorechner"
+                value="1"
+                checked
+              />
+              <label for="">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+            </div>
+
+            <div>
+              <input
+                onchange="bruttoZuNetto(event)"
+                type="radio"
+                name="1"
+                id="nettorechner"
+                value="2"
+              />
+              <label for="">Mehr wertsteuer abziehen (Brutto zu Netto)</label>
+            </div>
+          </div>
+          <div class="section2">
+            <h2>Mehrwertsteuersatz</h2>
+            <input type="radio" name="2" id="prozen19" value="3" checked />
+            <label for="">19%</label>
+            <input type="radio" name="2" id="prozent7" value="4" />
+            <label for="">7%</label>
+          </div>
+          <div class="section3">
+            <h2 id="netto-brutto">
+              Nettobetrag (preis ohne Mehrwertsteuer) in Euro
+            </h2>
+            <input type="number" name="" id="input" required />
+          </div>
+          <input
+            onclick="mehrertsteurRechner(event)"
+            class="berechnen"
+            type="button"
+            value="BERECHNEN"
+          />
+        </div>
+        <div class="ergebnis">
+          <p class="p1">Ergebnis</p>
+          <div class="mehrwertsteuerbetrag">
+            <p>mehrwertsteuerbetrag</p>
+            <p id="betrag">0</p>
+          </div>
+          <div class="endprise">
+            <p id="bruttoNettoEndBetrag">Bruttobetrrag</p>
+            <p id="result">0</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

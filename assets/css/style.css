@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* html {
+  font-size: 62.5%;
+} */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+#brutto-netto {
+  border: 2px solid black;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.eingabe {
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
+}
+.section1 {
+  background-color: #f3f6f8;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+.section2 {
+  background-color: #f3f6f8;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.section2 h2 {
+  margin-bottom: 10px;
+}
+label {
+  margin-right: 30px;
+  margin-left: 5px;
+}
+.section3 {
+  background-color: #f3f6f8;
+  padding: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#input {
+  width: max-content;
+  height: 30px;
+}
+.berechnen {
+  width: 90%;
+  margin: 5px 5% 20px 5%;
+  background-color: #246ca2;
+  padding: 7px;
+  border-radius: 5px;
+  color: #f0f5f8;
+  font-size: 20px;
+  font-weight: 600;
+}
+.p1 {
+  color: #3880c3;
+  margin: 10px 10px;
+}
+.mehrwertsteuerbetrag {
+  background-color: #f3f6f8;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+.endprise {
+  background-color: #f3f6f8;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
