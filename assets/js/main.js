@@ -10,10 +10,10 @@ const result = document.getElementById("result");
 
 function bruttoZuNetto(event) {
   event.preventDefault();
-  if (brutto.checked == true) {
+  if (brutto.checked) {
     h2.innerHTML = `Nettobetrag (preis ohne Mehrwertsteuer) in Euro`;
     bruttoNetto.innerHTML = "Bruttobetrrag";
-  } else if (netto.checked == true) {
+  } else if (netto.checked) {
     h2.innerHTML = "Bruttobetrag (preis inklusive Mehrwertsteuer) in Euro";
     bruttoNetto.innerHTML = "Nettobetrag";
   }
@@ -22,20 +22,20 @@ function bruttoZuNetto(event) {
 function mehrertsteurRechner(event) {
   event.preventDefault();
   console.log(brutto.checked);
-  if (brutto.checked == true && prozent19.checked == true) {
+  if (brutto.checked && prozent19.checked) {
     mehrwertsteuerBetrag.innerHTML =
       ((Number(inputbetarg.value) * 19) / 100).toFixed(2) + " €";
 
     result.innerHTML = (inputbetarg.value * 1.19).toFixed(2) + " €";
-  } else if (brutto.checked == true && prozent7.checked == true) {
+  } else if (brutto.checked && prozent7.checked) {
     mehrwertsteuerBetrag.innerHTML =
       ((Number(inputbetarg.value) * 7) / 100).toFixed(2) + " €";
     result.innerHTML = (inputbetarg.value * 1.07).toFixed(2) + " €";
-  } else if (netto.checked == true && prozent19.checked == true) {
+  } else if (netto.checked && prozent19.checked) {
     mehrwertsteuerBetrag.innerHTML =
       ((Number(inputbetarg.value) / 1.19) * 0.19).toFixed(2) + " €";
     result.innerHTML = (Number(inputbetarg.value) / 1.19).toFixed(2) + " €";
-  } else if (netto.checked == true && prozent7.checked == true) {
+  } else if (netto.checked && prozent7.checked) {
     mehrwertsteuerBetrag.innerHTML =
       ((Number(inputbetarg.value) / 1.07) * 0.07).toFixed(2) + " €";
     result.innerHTML = (Number(inputbetarg.value) / 1.07).toFixed(2) + " €";
